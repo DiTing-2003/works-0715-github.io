@@ -21,7 +21,9 @@ export default function About() {
 
   return (
     <main className="pt-24 pb-16 min-h-screen relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/5 via-transparent to-transparent pointer-events-none" />
+      <div className="fixed inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
+      <div className="fixed inset-0 bg-gradient-to-b from-black/60 via-black/70 to-[#080808]" />
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#F59E0B]/3 rounded-full blur-[150px] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
