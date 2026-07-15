@@ -23,64 +23,63 @@ export default function About() {
     <main className="pt-24 pb-16 min-h-screen relative">
       <div className="fixed inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
-      <div className="fixed inset-0 bg-gradient-to-b from-black/60 via-black/70 to-[#080808]" />
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#F59E0B]/3 rounded-full blur-[150px] pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-b from-white/70 via-white/80 to-[#f0f5ff]" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
-            <span className="text-xs uppercase tracking-[0.2em] text-[#F59E0B] font-semibold">关于我</span>
+          <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#3b82f6]" />
+            <span className="text-xs uppercase tracking-[0.2em] text-[#3b82f6] font-semibold">关于我</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight">个人<span className="gradient-gold">简历</span></h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#1e293b] tracking-tight">个人<span className="gradient-blue">简历</span></h1>
           <div className="section-divider max-w-xs mx-auto mt-6" />
         </div>
 
-        <R><div className="glass-card rounded-2xl p-8 mb-6 animated-border">
-          <div className="absolute -top-32 -right-32 w-72 h-72 bg-[#F59E0B]/5 rounded-full blur-[80px]" />
-          <div className="flex flex-col sm:flex-row items-start gap-6 relative z-10">
-            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center flex-shrink-0 shadow-2xl shadow-[#F59E0B]/30 animate-glow">
-              <span className="text-4xl font-black text-black">{siteConfig.name[0]}</span>
+        <R><div className="bg-white rounded-2xl p-8 mb-6 shadow-sm border border-[#e2e8f0]">
+          <div className="flex flex-col sm:flex-row items-start gap-6">
+            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#3b82f6]/30">
+              <span className="text-4xl font-black text-white">{siteConfig.name[0]}</span>
             </div>
             <div>
-              <h2 className="text-2xl font-black text-white mb-1">{siteConfig.name}</h2>
-              <p className="text-[#F59E0B] font-semibold mb-3">{siteConfig.description}</p>
-              <p className="text-[#8a8a8a] leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
+              <h2 className="text-2xl font-black text-[#1e293b] mb-1">{siteConfig.name}</h2>
+              <p className="text-[#3b82f6] font-semibold mb-3">{siteConfig.description}</p>
+              <p className="text-[#64748b] leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
             </div>
           </div>
         </div></R>
 
-        <R><div className="glass-card rounded-2xl p-8 mb-6 animated-border">
+        <R><div className="bg-white rounded-2xl p-8 mb-6 shadow-sm border border-[#e2e8f0]">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#F59E0B]/10 flex items-center justify-center"><Calendar className="w-5 h-5 text-[#F59E0B]" /></div>
-            <h3 className="text-xl font-bold text-white">工作经历</h3>
+            <div className="w-10 h-10 rounded-xl bg-[#dbeafe] flex items-center justify-center"><Calendar className="w-5 h-5 text-[#3b82f6]" /></div>
+            <h3 className="text-xl font-bold text-[#1e293b]">工作经历</h3>
           </div>
           <div className="space-y-8">
             {exps.map((e, i) => (
-              <div key={i} className="relative pl-8 border-l-2 border-white/10 group last:border-transparent hover:border-[#F59E0B]/40 transition-all">
-                <div className="absolute left-0 top-0 w-3.5 h-3.5 rounded-full bg-[#F59E0B] border-4 border-[#121212] -translate-x-1/2 shadow-lg shadow-[#F59E0B]/30" />
-                <span className="text-sm text-[#F59E0B] font-bold">{e.p}</span>
-                <h4 className="text-white font-bold text-lg mt-1">{e.c}</h4>
-                <p className="text-[#8a8a8a] text-sm mt-1">{e.d}</p>
+              <div key={i} className="relative pl-8 border-l-2 border-[#e2e8f0] group last:border-transparent hover:border-[#93c5fd] transition-all">
+                <div className="absolute left-0 top-0 w-3.5 h-3.5 rounded-full bg-[#3b82f6] border-4 border-white -translate-x-1/2 shadow-sm shadow-[#3b82f6]/30" />
+                <span className="text-sm text-[#3b82f6] font-bold">{e.p}</span>
+                <h4 className="text-[#1e293b] font-bold text-lg mt-1">{e.c}</h4>
+                <p className="text-[#64748b] text-sm mt-1">{e.d}</p>
               </div>
             ))}
           </div>
         </div></R>
 
-        <R><div className="glass-card rounded-2xl p-8 animated-border">
+        <R><div className="bg-white rounded-2xl p-8 shadow-sm border border-[#e2e8f0]">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#F59E0B]/10 flex items-center justify-center"><Award className="w-5 h-5 text-[#F59E0B]" /></div>
-            <h3 className="text-xl font-bold text-white">专业技能</h3>
+            <div className="w-10 h-10 rounded-xl bg-[#dbeafe] flex items-center justify-center"><Award className="w-5 h-5 text-[#3b82f6]" /></div>
+            <h3 className="text-xl font-bold text-[#1e293b]">专业技能</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {skills.map(s => (
               <div key={s.n} className="group">
                 <div className="flex justify-between mb-2">
-                  <span className="text-white text-sm font-semibold">{s.n}</span>
-                  <span className="text-[#F59E0B] text-sm font-black">{s.l}%</span>
+                  <span className="text-[#1e293b] text-sm font-semibold">{s.n}</span>
+                  <span className="text-[#3b82f6] text-sm font-black">{s.l}%</span>
                 </div>
-                <div className="h-3 bg-white/5 rounded-full overflow-hidden border border-white/5 p-[1px]">
-                  <div className="h-full bg-gradient-to-r from-[#F59E0B] via-[#FBBF24] to-[#F59E0B] rounded-full transition-all duration-1000 shadow-lg shadow-[#F59E0B]/30 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                <div className="h-3 bg-[#f1f5f9] rounded-full overflow-hidden border border-[#e2e8f0]">
+                  <div className="h-full bg-gradient-to-r from-[#3b82f6] via-[#60a5fa] to-[#3b82f6] rounded-full transition-all duration-1000 shadow-sm shadow-[#3b82f6]/30 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                   </div>
                 </div>
               </div>

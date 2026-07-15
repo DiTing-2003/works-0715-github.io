@@ -16,24 +16,28 @@ export default function Header() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#080808]/95 backdrop-blur-2xl border-b border-white/5' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled ? 'bg-white/90 backdrop-blur-2xl border-b border-[#e2e8f0] shadow-sm' : 'bg-transparent'
+    }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center shadow-lg shadow-[#F59E0B]/20 group-hover:shadow-[#F59E0B]/40 transition-all group-hover:scale-110">
-              <Film className="w-[18px] h-[18px] text-black" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] flex items-center justify-center shadow-lg shadow-[#3b82f6]/20 group-hover:shadow-[#3b82f6]/40 transition-all group-hover:scale-110">
+              <Film className="w-[18px] h-[18px] text-white" />
             </div>
-            <span className="text-white font-black text-lg tracking-tight">狄婷婷</span>
+            <span className="text-[#1e293b] font-black text-lg tracking-tight">狄婷婷</span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {links.map(l => (
               <Link key={l.to} to={l.to}
-                className={`px-5 py-2.5 text-sm font-semibold rounded-xl transition-all ${loc.pathname === l.to ? 'text-[#F59E0B] bg-[#F59E0B]/10' : 'text-[#8a8a8a] hover:text-white hover:bg-white/5'}`}>
+                className={`px-5 py-2.5 text-sm font-semibold rounded-xl transition-all ${
+                  loc.pathname === l.to ? 'text-[#3b82f6] bg-[#dbeafe]' : 'text-[#64748b] hover:text-[#1e293b] hover:bg-[#f1f5f9]'
+                }`}>
                 {l.label}
               </Link>
             ))}
           </nav>
-          <button className="md:hidden text-white p-2" onClick={() => setMenu(!menu)}>
+          <button className="md:hidden text-[#1e293b] p-2" onClick={() => setMenu(!menu)}>
             {menu ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
@@ -41,7 +45,9 @@ export default function Header() {
           <nav className="md:hidden pb-5">
             {links.map(l => (
               <Link key={l.to} to={l.to} onClick={() => setMenu(false)}
-                className={`block px-4 py-3 rounded-xl text-sm font-semibold mb-1 ${loc.pathname === l.to ? 'text-[#F59E0B] bg-[#F59E0B]/10' : 'text-[#8a8a8a]'}`}>
+                className={`block px-4 py-3 rounded-xl text-sm font-semibold mb-1 ${
+                  loc.pathname === l.to ? 'text-[#3b82f6] bg-[#dbeafe]' : 'text-[#64748b]'
+                }`}>
                 {l.label}
               </Link>
             ))}
