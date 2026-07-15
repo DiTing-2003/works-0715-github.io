@@ -1,9 +1,15 @@
 import { useBgIndex, getBg } from '@/hooks/useBackground'
+import { useLocation } from 'react-router-dom'
 
 const imgs = ['hero', 'portfolio', 'about', 'contact'] as const
 
 export default function BackgroundLayer() {
   const idx = useBgIndex()
+  const loc = useLocation()
+
+  // About and Contact pages always show hero background (星空山脉)
+  const fixedBgPages = ['/about', '/contact']
+  const displayIndex = fixedBgPages.includes(loc.pathname) ? 0 : idx
 
   return (
     <>
@@ -13,7 +19,7 @@ export default function BackgroundLayer() {
           className="fixed inset-0 bg-cover bg-center transition-opacity duration-1000"
           style={{
             backgroundImage: `url(${getBg(key)})`,
-            opacity: i === idx ? 1 : 0,
+            opacity: i === displayIndex ? 1 : 0,
             zIndex: -10,
           }}
         />
