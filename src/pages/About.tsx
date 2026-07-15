@@ -23,63 +23,65 @@ export default function About() {
     <main className="pt-24 pb-16 min-h-screen relative">
       <div className="fixed inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
-      <div className="fixed inset-0 bg-gradient-to-b from-[#faf5eb]/80 via-[#faf5eb]/85 to-[#faf5eb]" />
+      <div className="fixed inset-0 bg-gradient-to-b from-[#0d0d1a]/60 via-[#0d0d1a]/80 to-[#0d0d1a]" />
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#e8a838]/8 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-[#e8a838]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float shadow-sm">
+          <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float">
             <span className="w-1.5 h-1.5 rounded-full bg-[#e8a838]" />
             <span className="text-xs uppercase tracking-[0.2em] text-[#e8a838] font-semibold">关于我</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#3a2a1a] tracking-tight">个人<span className="gradient-amber">简历</span></h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight">个人<span className="gradient-gold">简历</span></h1>
           <div className="section-divider max-w-xs mx-auto mt-6" />
         </div>
 
-        <R><div className="bg-white rounded-2xl p-8 mb-6 shadow-sm border border-[#e8dcc8]">
-          <div className="flex flex-col sm:flex-row items-start gap-6">
-            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#e8a838] to-[#d4952a] flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#e8a838]/30">
-              <span className="text-4xl font-black text-white">{siteConfig.name[0]}</span>
+        <R><div className="glass-card rounded-2xl p-8 mb-6">
+          <div className="absolute -top-32 -right-32 w-72 h-72 bg-[#e8a838]/5 rounded-full blur-[80px]" />
+          <div className="flex flex-col sm:flex-row items-start gap-6 relative">
+            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#e8a838] to-[#d4952a] flex items-center justify-center flex-shrink-0 shadow-2xl shadow-[#e8a838]/30 animate-glow-warm">
+              <span className="text-4xl font-black text-[#0d0d1a]">{siteConfig.name[0]}</span>
             </div>
             <div>
-              <h2 className="text-2xl font-black text-[#3a2a1a] mb-1">{siteConfig.name}</h2>
+              <h2 className="text-2xl font-black text-white mb-1">{siteConfig.name}</h2>
               <p className="text-[#e8a838] font-semibold mb-3">{siteConfig.description}</p>
-              <p className="text-[#8a7a6a] leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
+              <p className="text-white/50 leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
             </div>
           </div>
         </div></R>
 
-        <R><div className="bg-white rounded-2xl p-8 mb-6 shadow-sm border border-[#e8dcc8]">
+        <R><div className="glass-card rounded-2xl p-8 mb-6">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#fef3d6] flex items-center justify-center"><Calendar className="w-5 h-5 text-[#e8a838]" /></div>
-            <h3 className="text-xl font-bold text-[#3a2a1a]">工作经历</h3>
+            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Calendar className="w-5 h-5 text-[#e8a838]" /></div>
+            <h3 className="text-xl font-bold text-white">工作经历</h3>
           </div>
           <div className="space-y-8">
             {exps.map((e, i) => (
-              <div key={i} className="relative pl-8 border-l-2 border-[#e8dcc8] group last:border-transparent hover:border-[#f5d78a] transition-all">
-                <div className="absolute left-0 top-0 w-3.5 h-3.5 rounded-full bg-[#e8a838] border-4 border-white -translate-x-1/2 shadow-sm shadow-[#e8a838]/30" />
+              <div key={i} className="relative pl-8 border-l-2 border-white/10 group last:border-transparent hover:border-[#e8a838]/40 transition-all">
+                <div className="absolute left-0 top-0 w-3.5 h-3.5 rounded-full bg-[#e8a838] border-4 border-[#1a1a2e] -translate-x-1/2 shadow-lg shadow-[#e8a838]/30" />
                 <span className="text-sm text-[#e8a838] font-bold">{e.p}</span>
-                <h4 className="text-[#3a2a1a] font-bold text-lg mt-1">{e.c}</h4>
-                <p className="text-[#8a7a6a] text-sm mt-1">{e.d}</p>
+                <h4 className="text-white font-bold text-lg mt-1">{e.c}</h4>
+                <p className="text-white/50 text-sm mt-1">{e.d}</p>
               </div>
             ))}
           </div>
         </div></R>
 
-        <R><div className="bg-white rounded-2xl p-8 shadow-sm border border-[#e8dcc8]">
+        <R><div className="glass-card rounded-2xl p-8">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#fef3d6] flex items-center justify-center"><Award className="w-5 h-5 text-[#e8a838]" /></div>
-            <h3 className="text-xl font-bold text-[#3a2a1a]">专业技能</h3>
+            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Award className="w-5 h-5 text-[#e8a838]" /></div>
+            <h3 className="text-xl font-bold text-white">专业技能</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {skills.map(s => (
               <div key={s.n} className="group">
                 <div className="flex justify-between mb-2">
-                  <span className="text-[#3a2a1a] text-sm font-semibold">{s.n}</span>
+                  <span className="text-white/80 text-sm font-semibold">{s.n}</span>
                   <span className="text-[#e8a838] text-sm font-black">{s.l}%</span>
                 </div>
-                <div className="h-3 bg-[#f0e8d8] rounded-full overflow-hidden border border-[#e8dcc8]">
+                <div className="h-3 bg-white/5 rounded-full overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-[#e8a838] via-[#f5c25a] to-[#e8a838] rounded-full transition-all duration-1000 shadow-sm shadow-[#e8a838]/30 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                   </div>
                 </div>
               </div>
