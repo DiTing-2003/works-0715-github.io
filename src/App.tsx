@@ -9,7 +9,7 @@ import Contact from '@/pages/Contact'
 export default function App() {
   return (
     <HashRouter>
-      <div className="min-h-screen flex flex-col bg-[#0d0d1a]">
+      <div className="min-h-screen flex flex-col">
         <BackgroundLayer />
         <div className="relative z-10 flex flex-col min-h-screen">
           <Header />
