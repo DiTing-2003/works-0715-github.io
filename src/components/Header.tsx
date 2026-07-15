@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Film, Menu, X } from 'lucide-react'
 const links = [
@@ -31,7 +31,7 @@ export default function Header() {
             {links.map(l => (
               <Link key={l.to} to={l.to}
                 className={`px-5 py-2.5 text-sm font-semibold rounded-xl transition-all ${
-                  loc.pathname === l.to ? 'text-[#e8a838] bg-[#e8a838]/10' : 'text-white/50 hover:text-white hover:bg-white/5'
+                  loc.pathname === l.to ? 'text-gold-light bg-[#e8a838]/10' : 'text-cream hover:text-white hover:bg-white/5'
                 }`}>
                 {l.label}
               </Link>
@@ -44,7 +44,7 @@ export default function Header() {
         {menu && <nav className="md:hidden pb-5">
           {links.map(l => (
             <Link key={l.to} to={l.to} onClick={() => setMenu(false)}
-              className={`block px-4 py-3 rounded-xl text-sm font-semibold mb-1 ${loc.pathname === l.to ? 'text-[#e8a838] bg-[#e8a838]/10' : 'text-white/50'}`}>
+              className={`block px-4 py-3 rounded-xl text-sm font-semibold mb-1 ${loc.pathname === l.to ? 'text-gold-light bg-[#e8a838]/10' : 'text-cream'}`}>
               {l.label}
             </Link>
           ))}

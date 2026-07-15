@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+﻿import { useRef, useEffect, useState } from 'react'
 import { Calendar, Award } from 'lucide-react'
 import { siteConfig } from '@/data/portfolio'
 
@@ -27,7 +27,7 @@ export default function About() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float">
             <span className="w-1.5 h-1.5 rounded-full bg-[#e8a838]" />
-            <span className="text-xs uppercase tracking-[0.2em] text-[#e8a838] font-semibold">关于我</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-gold-light font-semibold">关于我</span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight">个人<span className="gradient-gold">简历</span></h1>
           <div className="section-divider max-w-xs mx-auto mt-6" />
@@ -40,24 +40,24 @@ export default function About() {
             </div>
             <div>
               <h2 className="text-2xl font-black text-white mb-1">{siteConfig.name}</h2>
-              <p className="text-[#e8a838] font-semibold mb-3">{siteConfig.description}</p>
-              <p className="text-white/50 leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
+              <p className="text-gold-light font-semibold mb-3">{siteConfig.description}</p>
+              <p className="text-cream leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
             </div>
           </div>
         </div></R>
 
         <R><div className="glass-card rounded-2xl p-8 mb-6">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Calendar className="w-5 h-5 text-[#e8a838]" /></div>
+            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Calendar className="w-5 h-5 text-gold-light" /></div>
             <h3 className="text-xl font-bold text-white">工作经历</h3>
           </div>
           <div className="space-y-8">
             {exps.map((e, i) => (
               <div key={i} className="relative pl-8 border-l-2 border-white/10 group last:border-transparent hover:border-[#e8a838]/40 transition-all">
                 <div className="absolute left-0 top-0 w-3.5 h-3.5 rounded-full bg-[#e8a838] border-4 border-[#1a1a2e] -translate-x-1/2 shadow-lg shadow-[#e8a838]/30" />
-                <span className="text-sm text-[#e8a838] font-bold">{e.p}</span>
+                <span className="text-sm text-gold-light font-bold">{e.p}</span>
                 <h4 className="text-white font-bold text-lg mt-1">{e.c}</h4>
-                <p className="text-white/50 text-sm mt-1">{e.d}</p>
+                <p className="text-cream text-sm mt-1">{e.d}</p>
               </div>
             ))}
           </div>
@@ -65,15 +65,15 @@ export default function About() {
 
         <R><div className="glass-card rounded-2xl p-8">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Award className="w-5 h-5 text-[#e8a838]" /></div>
+            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Award className="w-5 h-5 text-gold-light" /></div>
             <h3 className="text-xl font-bold text-white">专业技能</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {skills.map(s => (
               <div key={s.n} className="group">
                 <div className="flex justify-between mb-2">
-                  <span className="text-white/80 text-sm font-semibold">{s.n}</span>
-                  <span className="text-[#e8a838] text-sm font-black">{s.l}%</span>
+                  <span className="text-cream text-sm font-semibold">{s.n}</span>
+                  <span className="text-gold-light text-sm font-black">{s.l}%</span>
                 </div>
                 <div className="h-3 bg-white/5 rounded-full overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-[#e8a838] via-[#f5c25a] to-[#e8a838] rounded-full transition-all duration-1000 shadow-sm shadow-[#e8a838]/30 relative overflow-hidden">

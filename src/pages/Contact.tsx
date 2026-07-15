@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+﻿import { useRef, useEffect, useState } from 'react'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { siteConfig } from '@/data/portfolio'
 
@@ -17,10 +17,10 @@ export default function Contact() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float">
             <span className="w-1.5 h-1.5 rounded-full bg-[#e8a838]" />
-            <span className="text-xs uppercase tracking-[0.2em] text-[#e8a838] font-semibold">联系我</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-gold-light font-semibold">联系我</span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight">与我<span className="gradient-gold">联系</span></h1>
-          <p className="text-white/50 mt-4">欢迎联系，一起创造精彩</p>
+          <p className="text-cream mt-4">欢迎联系，一起创造精彩</p>
           <div className="section-divider max-w-xs mx-auto mt-6" />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -34,12 +34,12 @@ export default function Contact() {
                 <div className="glass-card rounded-2xl p-6 hover:bg-white/[0.08] transition-all duration-500 group">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-xl bg-[#e8a838]/10 flex items-center justify-center group-hover:bg-[#e8a838]/20 transition-all group-hover:scale-110 duration-300">
-                      <item.icon className="w-5 h-5 text-[#e8a838]" />
+                      <item.icon className="w-5 h-5 text-gold-light" />
                     </div>
                     <div>
-                      <p className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-0.5">{item.label}</p>
+                      <p className="text-cream text-xs font-semibold uppercase tracking-wider mb-0.5">{item.label}</p>
                       {item.href ? (
-                        <a href={item.href} className="text-white font-bold text-base hover:text-[#e8a838] transition-colors">{item.value}</a>
+                        <a href={item.href} className="text-white font-bold text-base hover:text-gold-light transition-colors">{item.value}</a>
                       ) : (
                         <p className="text-white font-bold text-base">{item.value}</p>
                       )}
@@ -52,16 +52,16 @@ export default function Contact() {
           <R>
             <div className="glass-card rounded-2xl p-8 h-full">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Send className="w-5 h-5 text-[#e8a838]" /></div>
+                <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><Send className="w-5 h-5 text-gold-light" /></div>
                 <h3 className="text-xl font-bold text-white">发送消息</h3>
               </div>
               <form action={`mailto:${siteConfig.email}`} method="GET" className="space-y-4">
                 <input type="text" name="subject" placeholder="你的姓名"
-                  className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-[#e8a838]/50 focus:ring-2 focus:ring-[#e8a838]/10 transition-all" />
+                  className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-gray-soft focus:outline-none focus:border-[#e8a838]/50 focus:ring-2 focus:ring-[#e8a838]/10 transition-all" />
                 <input type="email" name="cc" placeholder="你的邮箱"
-                  className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-[#e8a838]/50 focus:ring-2 focus:ring-[#e8a838]/10 transition-all" />
+                  className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-gray-soft focus:outline-none focus:border-[#e8a838]/50 focus:ring-2 focus:ring-[#e8a838]/10 transition-all" />
                 <textarea name="body" rows={4} placeholder="想说的话..."
-                  className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-[#e8a838]/50 focus:ring-2 focus:ring-[#e8a838]/10 transition-all resize-none" />
+                  className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-gray-soft focus:outline-none focus:border-[#e8a838]/50 focus:ring-2 focus:ring-[#e8a838]/10 transition-all resize-none" />
                 <button type="submit"
                   className="group relative w-full px-6 py-4 bg-gradient-to-r from-[#e8a838] to-[#d4952a] text-[#0d0d1a] font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#e8a838]/40 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#e8a838]/20">
                   <span className="relative z-10 flex items-center justify-center gap-2 text-sm"><Send className="w-4 h-4" />发送消息</span>

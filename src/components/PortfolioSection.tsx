@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+﻿import { useState, useRef, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { portfolioItems, categories, type PortfolioItem } from '@/data/portfolio'
 import PortfolioCard from './PortfolioCard'
@@ -45,10 +45,10 @@ export default function PortfolioSection() {
       <div className={`text-center mb-16 transition-all duration-1000 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float">
           <span className="w-1.5 h-1.5 rounded-full bg-[#e8a838]" />
-          <span className="text-xs uppercase tracking-[0.2em] text-[#e8a838] font-semibold">作品集</span>
+          <span className="text-xs uppercase tracking-[0.2em] text-gold-light font-semibold">作品集</span>
         </div>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 tracking-tight">精选<span className="gradient-gold">作品</span></h2>
-        <p className="text-white/40 max-w-md mx-auto text-sm">左右滑动浏览</p>
+        <p className="text-cream max-w-md mx-auto text-sm">左右滑动浏览</p>
         <div className="section-divider max-w-xs mx-auto mt-6" />
       </div>
 
@@ -56,7 +56,7 @@ export default function PortfolioSection() {
         {categories.map(c => (
           <button key={c.key} onClick={() => setActive(c.key)}
             className={`px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 ${
-              active === c.key ? 'bg-gradient-to-r from-[#e8a838] to-[#d4952a] text-[#0d0d1a] shadow-lg shadow-[#e8a838]/30 scale-105' : 'glass-card text-white/50 hover:text-white hover:bg-white/10'
+              active === c.key ? 'bg-gradient-to-r from-[#e8a838] to-[#d4952a] text-[#0d0d1a] shadow-lg shadow-[#e8a838]/30 scale-105' : 'glass-card text-cream hover:text-white hover:bg-white/10'
             }`}>
             {c.label}
           </button>
@@ -119,7 +119,7 @@ export default function PortfolioSection() {
           )}
         </div>
       ) : (
-        <div className="py-20 text-center"><p className="text-white/40">该分类暂无作品</p></div>
+        <div className="py-20 text-center"><p className="text-cream">该分类暂无作品</p></div>
       )}
 
       {selected && <VideoModal item={selected} onClose={() => setSelected(null)} />}

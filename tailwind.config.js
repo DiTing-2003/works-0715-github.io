@@ -5,14 +5,14 @@ export default {
     extend: {
       colors: {
         night: { DEFAULT: '#0d0d1a', light: '#1a1a2e', dark: '#080812' },
-        gold: { DEFAULT: '#e8a838', light: '#f5c25a', dark: '#d4952a' },
-        mist: { DEFAULT: '#f8f8fc', light: '#ffffff', dark: '#eaeaef' },
+        gold: { DEFAULT: '#e8a838', light: '#F5E6B8', dark: '#d4952a' },
+        cream: '#FFF8F0',
+        gray: { soft: '#CCCCCC' },
       },
       animation: {
         'glow-warm': 'glowWarm 3s ease-in-out infinite alternate',
         'float': 'float 6s ease-in-out infinite',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
-        'twinkle': 'twinkle 4s ease-in-out infinite',
       },
       keyframes: {
         glowWarm: {
@@ -21,7 +21,6 @@ export default {
         },
         float: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-10px)' } },
         pulseSoft: { '0%,100%': { opacity: '0.2' }, '50%': { opacity: '0.5' } },
-        twinkle: { '0%,100%': { opacity: '0.3' }, '50%': { opacity: '0.8' } },
       },
     },
   },

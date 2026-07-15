@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+﻿import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Film, Mail, Phone, MapPin } from 'lucide-react'
 import { siteConfig } from '@/data/portfolio'
@@ -27,36 +27,36 @@ export default function Footer() {
               </div>
               <span className="text-white font-black text-lg">{siteConfig.name}</span>
             </div>
-            <p className="text-white/40 text-sm leading-relaxed">专业视频剪辑与后期制作</p>
+            <p className="text-cream text-sm leading-relaxed">专业视频剪辑与后期制作</p>
           </div>
           <div>
-            <h4 className="text-white/80 text-sm font-bold mb-5 uppercase tracking-wider">导航</h4>
+            <h4 className="text-cream text-sm font-bold mb-5 uppercase tracking-wider">导航</h4>
             <ul className="space-y-3">
               {[{ to: '/', label: '首页' }, { to: '/about', label: '简历' }, { to: '/contact', label: '联系' }].map(l => (
-                <li key={l.to}><Link to={l.to} className="text-white/40 text-sm hover:text-[#e8a838] transition-colors">{l.label}</Link></li>
+                <li key={l.to}><Link to={l.to} className="text-cream text-sm hover:text-gold-light transition-colors">{l.label}</Link></li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 className="text-white/80 text-sm font-bold mb-5 uppercase tracking-wider">联系方式</h4>
+            <h4 className="text-cream text-sm font-bold mb-5 uppercase tracking-wider">联系方式</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-white/40 text-sm">
-                <div className="w-7 h-7 rounded-lg bg-[#e8a838]/10 flex items-center justify-center"><Mail className="w-3.5 h-3.5 text-[#e8a838]" /></div>
-                <a href={`mailto:${siteConfig.email}`} className="hover:text-[#e8a838] transition-colors">{siteConfig.email}</a>
+              <li className="flex items-center gap-2 text-cream text-sm">
+                <div className="w-7 h-7 rounded-lg bg-[#e8a838]/10 flex items-center justify-center"><Mail className="w-3.5 h-3.5 text-gold-light" /></div>
+                <a href={`mailto:${siteConfig.email}`} className="hover:text-gold-light transition-colors">{siteConfig.email}</a>
               </li>
-              <li className="flex items-center gap-2 text-white/40 text-sm">
-                <div className="w-7 h-7 rounded-lg bg-[#e8a838]/10 flex items-center justify-center"><Phone className="w-3.5 h-3.5 text-[#e8a838]" /></div>
-                <a href={`tel:${siteConfig.phone}`} className="hover:text-[#e8a838] transition-colors">{siteConfig.phone}</a>
+              <li className="flex items-center gap-2 text-cream text-sm">
+                <div className="w-7 h-7 rounded-lg bg-[#e8a838]/10 flex items-center justify-center"><Phone className="w-3.5 h-3.5 text-gold-light" /></div>
+                <a href={`tel:${siteConfig.phone}`} className="hover:text-gold-light transition-colors">{siteConfig.phone}</a>
               </li>
-              <li className="flex items-center gap-2 text-white/40 text-sm">
-                <div className="w-7 h-7 rounded-lg bg-[#e8a838]/10 flex items-center justify-center"><MapPin className="w-3.5 h-3.5 text-[#e8a838]" /></div>
+              <li className="flex items-center gap-2 text-cream text-sm">
+                <div className="w-7 h-7 rounded-lg bg-[#e8a838]/10 flex items-center justify-center"><MapPin className="w-3.5 h-3.5 text-gold-light" /></div>
                 <span>{siteConfig.location}</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-white/5 text-center">
-          <p className="text-white/30 text-xs tracking-wider">&copy; {y} {siteConfig.name} &middot; All rights reserved</p>
+          <p className="text-gray-soft text-xs tracking-wider">&copy; {y} {siteConfig.name} &middot; All rights reserved</p>
         </div>
       </div>
     </footer>

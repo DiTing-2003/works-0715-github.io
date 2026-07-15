@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Play, ChevronDown } from 'lucide-react'
 
@@ -21,9 +21,12 @@ export default function Hero() {
       <div className={`relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-float">
           <span className="w-2 h-2 bg-[#e8a838] rounded-full animate-pulse" />
-          <span className="text-xs uppercase tracking-[0.2em] text-[#e8a838] font-semibold">专业剪辑师</span>
+          <span className="text-xs uppercase tracking-[0.2em] text-gold-light font-semibold">专业剪辑师</span>
         </div>
-        <p className="text-base sm:text-lg text-white/40 mb-14 max-w-md mx-auto">用镜头讲述故事，以剪辑创造感动</p>
+        <div className="mb-14">
+          <p className="text-lg sm:text-xl text-cream font-light tracking-wide">用镜头讲述故事，以剪辑创造感动</p>
+          <p className="text-xs sm:text-sm text-gray-soft mt-2 tracking-wider">Stories through lenses, emotions through edits</p>
+        </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#portfolio" onClick={scrollToPortfolio}
             className="group relative inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-[#e8a838] to-[#d4952a] text-[#0d0d1a] font-bold text-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#e8a838]/40 hover:scale-105 active:scale-95 shadow-lg shadow-[#e8a838]/20 animate-glow-warm">
