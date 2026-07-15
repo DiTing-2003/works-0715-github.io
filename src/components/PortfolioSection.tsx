@@ -17,7 +17,6 @@ export default function PortfolioSection() {
 
   return (
     <section id="portfolio" ref={ref} className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#e8a838]/[0.02] to-transparent pointer-events-none" />
       <div className={`text-center mb-16 transition-all duration-1000 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="inline-flex items-center gap-2 glass-card px-4 py-1.5 rounded-full mb-6 animate-float">
           <span className="w-1.5 h-1.5 rounded-full bg-[#e8a838]" />
@@ -37,13 +36,44 @@ export default function PortfolioSection() {
           </button>
         ))}
       </div>
+
       {items.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item, idx) => <PortfolioCard key={item.id} item={item} index={idx} onClick={setSelected} />)}
+        <div className="space-y-6">
+          {/* Magazine row: large card + stacked small cards */}
+          {items.slice(0, 3).length >= 3 && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="md:col-span-2">
+                {items[0] && <PortfolioCard item={items[0]} index={0} onClick={setSelected} />}
+              </div>
+              <div className="flex flex-col gap-6">
+                {items[1] && <PortfolioCard item={items[1]} index={1} onClick={setSelected} />}
+                {items[2] && <PortfolioCard item={items[2]} index={2} onClick={setSelected} />}
+              </div>
+            </div>
+          )}
+
+          {/* Remaining cards in 3-column grid */}
+          {items.length > 3 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {items.slice(3).map((item, idx) => (
+                <PortfolioCard key={item.id} item={item} index={idx} onClick={setSelected} />
+              ))}
+            </div>
+          )}
+
+          {/* Fallback for < 3 items */}
+          {items.length < 3 && items.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {items.map((item, idx) => (
+                <PortfolioCard key={item.id} item={item} index={idx} onClick={setSelected} />
+              ))}
+            </div>
+          )}
         </div>
       ) : (
         <div className="py-20 text-center"><p className="text-white/40">该分类暂无作品</p></div>
       )}
+
       {selected && <VideoModal item={selected} onClose={() => setSelected(null)} />}
     </section>
   )

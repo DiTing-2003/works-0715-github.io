@@ -21,9 +21,6 @@ export default function About() {
 
   return (
     <main className="pt-24 pb-16 min-h-screen relative">
-      <div className="fixed inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
-      <div className="fixed inset-0 bg-gradient-to-b from-[#0d0d1a]/60 via-[#0d0d1a]/80 to-[#0d0d1a]" />
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#e8a838]/8 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-[#e8a838]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -37,8 +34,7 @@ export default function About() {
         </div>
 
         <R><div className="glass-card rounded-2xl p-8 mb-6">
-          <div className="absolute -top-32 -right-32 w-72 h-72 bg-[#e8a838]/5 rounded-full blur-[80px]" />
-          <div className="flex flex-col sm:flex-row items-start gap-6 relative">
+          <div className="flex flex-col sm:flex-row items-start gap-6">
             <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#e8a838] to-[#d4952a] flex items-center justify-center flex-shrink-0 shadow-2xl shadow-[#e8a838]/30 animate-glow-warm">
               <span className="text-4xl font-black text-[#0d0d1a]">{siteConfig.name[0]}</span>
             </div>

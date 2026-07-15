@@ -11,9 +11,6 @@ function R({ children }: { children: React.ReactNode }) {
 export default function Contact() {
   return (
     <main className="pt-24 pb-16 min-h-screen relative">
-      <div className="fixed inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
-      <div className="fixed inset-0 bg-gradient-to-b from-[#0d0d1a]/60 via-[#0d0d1a]/80 to-[#0d0d1a]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#e8a838]/8 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

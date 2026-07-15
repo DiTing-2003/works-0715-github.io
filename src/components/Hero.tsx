@@ -13,14 +13,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Fixed background - doesn't scroll */}
-      <div className="fixed inset-0 scale-110">
-        <div className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
-      </div>
-      <div className="fixed inset-0 bg-gradient-to-b from-[#0d0d1a]/50 via-[#0d0d1a]/60 to-[#0d0d1a]" />
-
-      {/* Warm golden glows */}
+      {/* Golden glows */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#e8a838]/10 rounded-full blur-[150px] animate-pulse-soft" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#e8a838]/6 rounded-full blur-[120px] animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#e8a838]/30 to-transparent" />
