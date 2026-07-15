@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Play, ChevronDown } from 'lucide-react'
 
@@ -9,21 +9,16 @@ function scrollToPortfolio(e: React.MouseEvent) {
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false)
-  const parallaxRef = useRef<HTMLDivElement>(null)
   useEffect(() => setLoaded(true), [])
-  useEffect(() => {
-    const fn = () => { if (parallaxRef.current) parallaxRef.current.style.transform = `translateY(${window.scrollY * 0.35}px) scale(1.1)` }
-    window.addEventListener('scroll', fn)
-    return () => window.removeEventListener('scroll', fn)
-  }, [])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div ref={parallaxRef} className="absolute inset-0 scale-110">
+      {/* Fixed background - doesn't scroll */}
+      <div className="fixed inset-0 scale-110">
         <div className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg')" }} />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d1a]/50 via-[#0d0d1a]/60 to-[#0d0d1a]" />
+      <div className="fixed inset-0 bg-gradient-to-b from-[#0d0d1a]/50 via-[#0d0d1a]/60 to-[#0d0d1a]" />
 
       {/* Warm golden glows */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#e8a838]/10 rounded-full blur-[150px] animate-pulse-soft" />
@@ -35,8 +30,7 @@ export default function Hero() {
           <span className="w-2 h-2 bg-[#e8a838] rounded-full animate-pulse" />
           <span className="text-xs uppercase tracking-[0.2em] text-[#e8a838] font-semibold">专业剪辑师</span>
         </div>
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter text-glow">狄婷婷</h1>
-        <p className="text-base sm:text-lg text-white/40 mb-14 max-w-md mx-auto mt-6">用镜头讲述故事，以剪辑创造感动</p>
+        <p className="text-base sm:text-lg text-white/40 mb-14 max-w-md mx-auto">用镜头讲述故事，以剪辑创造感动</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#portfolio" onClick={scrollToPortfolio}
             className="group relative inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-[#e8a838] to-[#d4952a] text-[#0d0d1a] font-bold text-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#e8a838]/40 hover:scale-105 active:scale-95 shadow-lg shadow-[#e8a838]/20 animate-glow-warm">
@@ -49,6 +43,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
         <div className="w-6 h-10 rounded-full border border-white/10 flex items-start justify-center p-1.5 backdrop-blur-sm">
           <div className="w-1.5 h-3 bg-gradient-to-b from-[#e8a838] to-transparent rounded-full animate-bounce" />
