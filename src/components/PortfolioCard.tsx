@@ -17,7 +17,8 @@ export default function PortfolioCard({ item, index, onClick }: { item: Portfoli
       className={`group bg-[#1a1a2e] rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-[#e8a838]/10 hover:-translate-y-2 border border-white/5 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
       style={{ transitionDelay: `${index * 150}ms` }}>
       <div className="relative aspect-video overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d1a] to-[#080812] flex items-center justify-center">
+        <img src={item.thumbnail} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e]/70 via-[#0d0d1a]/50 to-[#080812]/70 flex items-center justify-center">
           <Play className="w-14 h-14 text-gold-light/20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center">
