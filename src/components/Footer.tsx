@@ -1,11 +1,19 @@
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Film, Mail, Phone, MapPin } from 'lucide-react'
 import { siteConfig } from '@/data/portfolio'
 
 export default function Footer() {
+  const [vis, setVis] = useState(false)
+  const ref = useRef<HTMLElement>(null)
+  useEffect(() => {
+    const el = ref.current; if (!el) return
+    const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVis(true); o.unobserve(el) } }, { threshold: 0.1 })
+    o.observe(el); return () => o.disconnect()
+  }, [])
   const y = new Date().getFullYear()
   return (
-    <footer className="relative border-t border-white/5 bg-[#080808] overflow-hidden">
+    <footer ref={ref} className={"relative border-t border-white/5 bg-[#080808] overflow-hidden transition-all duration-700 " + (vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#F59E0B]/5 rounded-full blur-[100px]" />
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F59E0B]/3 rounded-full blur-[100px]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F59E0B]/40 to-transparent" />

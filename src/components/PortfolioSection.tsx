@@ -30,7 +30,7 @@ export default function PortfolioSection() {
         <p className="text-[#8a8a8a] max-w-md mx-auto text-sm">点击卡片查看完整视频</p>
         <div className="section-divider max-w-xs mx-auto mt-6" />
       </div>
-      <div className={`flex flex-wrap justify-center gap-2 mb-14 transition-all duration-700 delay-200 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`flex flex-wrap justify-center gap-2 mb-14 transition-all duration-700 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {categories.map(c => (
           <button key={c.key} onClick={() => setActive(c.key)}
             className={`px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 ${active === c.key ? 'bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-black shadow-lg shadow-[#F59E0B]/30 scale-105' : 'glass-card text-[#8a8a8a] hover:text-white hover:bg-white/10'}`}>
