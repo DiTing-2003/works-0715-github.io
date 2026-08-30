@@ -22,7 +22,7 @@ export const portfolioItems: PortfolioItem[] = [
   { id:'6', title:'礼貌捞个亿', category:'video', description:'漫剧素材', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E7%A4%BC%E8%B2%8C%E6%8D%9E%E4%B8%AA%E4%BA%BF_%E7%AC%AC%E4%BA%8C%E9%9B%86.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-limao2.jpg', tags:['个人'], year:'2026' },
   { id:'7', title:'方寸之间女主三视图', category:'image', description:'AI 图片', thumbnail:'/works-0715-github.io/cover-fangcun.jpg', tags:['个人'], year:'2026' },
   { id:'8', title:'方寸之间女主表情', category:'image', description:'AI图片', thumbnail:'/works-0715-github.io/cover-fangcun-biaoqing.jpg', tags:['个人'], year:'2026' },
-  { id:'9', title:'作品标题 9', category:'script', description:'影视混剪作品', thumbnail:'/works-0715-github.io/placeholder-9.jpg', content:'（剧本内容待补充）', tags:['混剪','影视'], year:'2022' },
+  { id:'9', title:'方寸之间女主服装', category:'image', description:'AI图片', thumbnail:'/works-0715-github.io/cover-fangcun-fuzhuang.jpg', tags:['个人'], year:'2026' },
 ]
 export const categories = [
   { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' }, { key:'script', label:'剧本' },
