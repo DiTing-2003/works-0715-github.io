@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
   heroBackground: { type: 'image', url: 'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg' },
 }
 export const portfolioItems: PortfolioItem[] = [
-  { id:'1', title:'周年庆舞蹈', category:'video', description:'音乐剪辑作品', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%A7%86%E9%A2%9102.mp4', videoType:'direct', thumbnail:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E5%91%A8%E5%B9%B4%E5%BA%86%E8%88%9E%E8%B9%88%E5%B0%81%E9%9D%A2.jpg', tags:['音乐','剪辑'], year:'2026' },
+  { id:'1', title:'高考满分去当兵绝美校花求我别走', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E9%AB%98%E8%80%83%E6%BB%A1%E5%88%86%E5%8E%BB%E5%BD%93%E5%85%B5%E7%BB%9D%E7%BE%8E%E6%A0%A1%E8%8A%B1%E6%B1%82%E6%88%91%E5%88%AB%E8%B5%B0.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-gaokao.jpg', tags:[], year:'2026' },
   { id:'2', title:'作品标题 2', category:'video', description:'影视剪辑作品', videoUrl:'视频2地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-2.jpg', tags:['影视','调色'], year:'2024' },
   { id:'3', title:'作品标题 3', category:'video', description:'音乐剪辑作品', videoUrl:'视频3地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-3.jpg', tags:['音乐','MV'], year:'2024' },
   { id:'4', title:'作品标题 4', category:'image', description:'品牌宣传片', thumbnail:'/works-0715-github.io/placeholder-4.jpg', tags:['宣传片','品牌'], year:'2023' },
