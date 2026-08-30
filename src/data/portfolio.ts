@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
 }
 export const portfolioItems: PortfolioItem[] = [
   { id:'1', title:'高考满分去当兵绝美校花求我别走', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E9%AB%98%E8%80%83%E6%BB%A1%E5%88%86%E5%8E%BB%E5%BD%93%E5%85%B5%E7%BB%9D%E7%BE%8E%E6%A0%A1%E8%8A%B1%E6%B1%82%E6%88%91%E5%88%AB%E8%B5%B0.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-gaokao.jpg', tags:[], year:'2026' },
-  { id:'2', title:'作品标题 2', category:'video', description:'影视剪辑作品', videoUrl:'视频2地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-2.jpg', tags:['影视','调色'], year:'2024' },
+  { id:'2', title:'魔界打斗结尾', category:'video', description:'视觉', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E9%AD%94%E7%95%8C%E6%89%93%E6%96%97%E7%BB%93%E5%B0%BE.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-mojie.jpg', tags:['个人'], year:'2023' },
   { id:'3', title:'作品标题 3', category:'video', description:'音乐剪辑作品', videoUrl:'视频3地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-3.jpg', tags:['音乐','MV'], year:'2024' },
   { id:'4', title:'作品标题 4', category:'image', description:'品牌宣传片', thumbnail:'/works-0715-github.io/placeholder-4.jpg', tags:['宣传片','品牌'], year:'2023' },
   { id:'5', title:'作品标题 5', category:'video', description:'短片电影剪辑', videoUrl:'视频5地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-5.jpg', tags:['短片','剧情'], year:'2023' },
