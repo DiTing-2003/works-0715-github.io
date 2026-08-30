@@ -69,11 +69,11 @@ export default function PortfolioSection() {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8"
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-4 sm:-mx-6 lg:-mx-8"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {Array.from({ length: totalPages }).map((_, pIdx) => (
-              <div key={pIdx} className="snap-start shrink-0 w-full">
+              <div key={pIdx} className="snap-start shrink-0 w-full px-3">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {items.slice(pIdx * PER_PAGE, pIdx * PER_PAGE + PER_PAGE).map((item, i) => (
                   <PortfolioCard key={item.id} item={item} index={i} onClick={setSelected} />
