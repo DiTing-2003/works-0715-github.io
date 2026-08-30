@@ -1,7 +1,8 @@
 export type VideoType = 'direct' | 'youtube' | 'bilibili' | 'vimeo' | '123pan'
+export type PortfolioCategory = 'video' | 'image' | 'script'
 export interface PortfolioItem {
-  id: string; title: string; category: 'commercial' | 'film' | 'music' | 'documentary'
-  description: string; videoUrl: string; videoType: VideoType; thumbnail: string; tags: string[]; year: string
+  id: string; title: string; category: PortfolioCategory
+  description: string; videoUrl?: string; videoType?: VideoType; thumbnail: string; content?: string; tags: string[]; year: string
 }
 export interface HeroBackground { type: 'image' | 'video'; url: string }
 export interface SiteConfig {
@@ -13,17 +14,16 @@ export const siteConfig: SiteConfig = {
   heroBackground: { type: 'image', url: 'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg' },
 }
 export const portfolioItems: PortfolioItem[] = [
-  { id:'1', title:'周年庆舞蹈', category:'music', description:'音乐剪辑作品', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%A7%86%E9%A2%9102.mp4', videoType:'direct', thumbnail:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E5%91%A8%E5%B9%B4%E5%BA%86%E8%88%9E%E8%B9%88%E5%B0%81%E9%9D%A2.jpg', tags:['音乐','剪辑'], year:'2026' },
-  { id:'2', title:'作品标题 2', category:'film', description:'影视剪辑作品', videoUrl:'视频2地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-2.jpg', tags:['影视','调色'], year:'2024' },
-  { id:'3', title:'作品标题 3', category:'music', description:'音乐剪辑作品', videoUrl:'视频3地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-3.jpg', tags:['音乐','MV'], year:'2024' },
-  { id:'4', title:'作品标题 4', category:'commercial', description:'品牌宣传片', videoUrl:'视频4地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-4.jpg', tags:['宣传片','品牌'], year:'2023' },
-  { id:'5', title:'作品标题 5', category:'film', description:'短片电影剪辑', videoUrl:'视频5地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-5.jpg', tags:['短片','剧情'], year:'2023' },
-  { id:'6', title:'作品标题 6', category:'music', description:'演唱会剪辑', videoUrl:'视频6地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-6.jpg', tags:['演唱会','现场'], year:'2023' },
-  { id:'7', title:'作品标题 7', category:'documentary', description:'纪录片剪辑', videoUrl:'视频7地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-7.jpg', tags:['纪录片','人文'], year:'2022' },
-  { id:'8', title:'作品标题 8', category:'commercial', description:'产品广告剪辑', videoUrl:'视频8地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-8.jpg', tags:['广告','产品'], year:'2022' },
-  { id:'9', title:'作品标题 9', category:'film', description:'影视混剪作品', videoUrl:'视频9地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-9.jpg', tags:['混剪','影视'], year:'2022' },
+  { id:'1', title:'周年庆舞蹈', category:'video', description:'音乐剪辑作品', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%A7%86%E9%A2%9102.mp4', videoType:'direct', thumbnail:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E5%91%A8%E5%B9%B4%E5%BA%86%E8%88%9E%E8%B9%88%E5%B0%81%E9%9D%A2.jpg', tags:['音乐','剪辑'], year:'2026' },
+  { id:'2', title:'作品标题 2', category:'video', description:'影视剪辑作品', videoUrl:'视频2地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-2.jpg', tags:['影视','调色'], year:'2024' },
+  { id:'3', title:'作品标题 3', category:'video', description:'音乐剪辑作品', videoUrl:'视频3地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-3.jpg', tags:['音乐','MV'], year:'2024' },
+  { id:'4', title:'作品标题 4', category:'image', description:'品牌宣传片', thumbnail:'/works-0715-github.io/placeholder-4.jpg', tags:['宣传片','品牌'], year:'2023' },
+  { id:'5', title:'作品标题 5', category:'video', description:'短片电影剪辑', videoUrl:'视频5地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-5.jpg', tags:['短片','剧情'], year:'2023' },
+  { id:'6', title:'作品标题 6', category:'video', description:'演唱会剪辑', videoUrl:'视频6地址', videoType:'direct', thumbnail:'/works-0715-github.io/placeholder-6.jpg', tags:['演唱会','现场'], year:'2023' },
+  { id:'7', title:'作品标题 7', category:'script', description:'纪录片剪辑', thumbnail:'/works-0715-github.io/placeholder-7.jpg', content:'（剧本内容待补充）', tags:['纪录片','人文'], year:'2022' },
+  { id:'8', title:'作品标题 8', category:'image', description:'产品广告剪辑', thumbnail:'/works-0715-github.io/placeholder-8.jpg', tags:['广告','产品'], year:'2022' },
+  { id:'9', title:'作品标题 9', category:'script', description:'影视混剪作品', thumbnail:'/works-0715-github.io/placeholder-9.jpg', content:'（剧本内容待补充）', tags:['混剪','影视'], year:'2022' },
 ]
 export const categories = [
-  { key:'all', label:'全部' }, { key:'commercial', label:'商业' }, { key:'film', label:'影视' },
-  { key:'music', label:'音乐' }, { key:'documentary', label:'纪录片' },
+  { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' }, { key:'script', label:'剧本' },
 ] as const

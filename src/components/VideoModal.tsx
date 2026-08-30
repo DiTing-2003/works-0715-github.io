@@ -16,13 +16,21 @@ export default function VideoModal({ item, onClose }: { item: PortfolioItem; onC
           <h3 className="text-white text-xl font-bold">{item.title}</h3>
           <button onClick={onClose} className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-cream hover:text-white hover:bg-white/10 transition-all"><X className="w-4 h-4" /></button>
         </div>
-        {item.videoType === 'direct' ? (
+        {item.category === 'video' && item.videoType === 'direct' ? (
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/5 bg-black">
             <video ref={videoRef} controls autoPlay className="w-full aspect-video" controlsList="nodownload"><source src={item.videoUrl} type="video/mp4" /></video>
           </div>
-        ) : (
+        ) : item.category === 'video' ? (
           <div className="aspect-video bg-gradient-to-br from-[#1a1a2e] to-[#0d0d1a] rounded-2xl flex items-center justify-center border border-white/5">
             <p className="text-cream">视频加载中...</p>
+          </div>
+        ) : item.category === 'image' ? (
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/5 bg-black">
+            <img src={item.thumbnail} alt={item.title} className="w-full max-h-[70vh] object-contain" />
+          </div>
+        ) : (
+          <div className="rounded-2xl bg-gradient-to-br from-[#1a1a2e] to-[#0d0d1a] border border-white/5 p-6 sm:p-8 max-h-[65vh] overflow-y-auto">
+            <p className="text-cream text-base leading-relaxed whitespace-pre-wrap">{item.content || '（剧本内容待补充）'}</p>
           </div>
         )}
         <div className="flex flex-wrap gap-2 mt-4">

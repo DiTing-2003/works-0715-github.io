@@ -38,5 +38,8 @@ body {
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
 
+@keyframes titleFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-title-fade { animation: titleFade 0.7s ease-out; }
+
 /* Star particles */
 .star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; }

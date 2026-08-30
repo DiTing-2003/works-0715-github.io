@@ -1,7 +1,13 @@
 ﻿import { useRef, useEffect, useState } from 'react'
-import { Play } from 'lucide-react'
+import { Play, Image as ImageIcon, FileText } from 'lucide-react'
 import type { PortfolioItem } from '@/data/portfolio'
-const catLabels: Record<string, string> = { commercial:'商业', film:'影视', music:'音乐', documentary:'纪录片' }
+const catLabels: Record<string, string> = { video:'视频', image:'图片', script:'剧本' }
+
+function TypeIcon({ category, className }: { category: string; className: string }) {
+  if (category === 'image') return <ImageIcon className={className} />
+  if (category === 'script') return <FileText className={className} />
+  return <Play className={className} />
+}
 
 export default function PortfolioCard({ item, index, onClick }: { item: PortfolioItem; index: number; onClick: (i: PortfolioItem) => void }) {
   const [vis, setVis] = useState(false)
@@ -19,11 +25,11 @@ export default function PortfolioCard({ item, index, onClick }: { item: Portfoli
       <div className="relative aspect-video overflow-hidden">
         <img src={item.thumbnail} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e]/70 via-[#0d0d1a]/50 to-[#080812]/70 flex items-center justify-center">
-          <Play className="w-14 h-14 text-gold-light/20" />
+          <TypeIcon category={item.category} className="w-14 h-14 text-gold-light/20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-center justify-center">
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#e8a838] to-[#d4952a] flex items-center justify-center shadow-2xl shadow-[#e8a838]/50 transform scale-0 group-hover:scale-100 transition-all duration-500 delay-100 animate-glow-warm">
-            <Play className="w-8 h-8 text-[#0d0d1a] ml-1" />
+            <TypeIcon category={item.category} className="w-8 h-8 text-[#0d0d1a]" />
           </div>
         </div>
         <span className="absolute top-3 left-3 px-3 py-1.5 text-[11px] font-semibold bg-black/40 backdrop-blur-sm text-cream rounded-full">{catLabels[item.category] || item.category}</span>

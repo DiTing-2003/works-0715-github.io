@@ -7,9 +7,16 @@ function scrollToPortfolio(e: React.MouseEvent) {
   document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })
 }
 
+const titles = ['AI视觉设计师', 'AI叙事设计师', 'AI漫剧制作师']
+
 export default function Hero() {
   const [loaded, setLoaded] = useState(false)
+  const [titleIdx, setTitleIdx] = useState(0)
   useEffect(() => setLoaded(true), [])
+  useEffect(() => {
+    const t = setInterval(() => setTitleIdx(i => (i + 1) % titles.length), 2600)
+    return () => clearInterval(t)
+  }, [])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -21,11 +28,11 @@ export default function Hero() {
       <div className={`relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-float">
           <span className="w-2 h-2 bg-[#e8a838] rounded-full animate-pulse" />
-          <span className="text-xs uppercase tracking-[0.2em] text-gold-light font-semibold">专业剪辑师</span>
+          <span key={titleIdx} className="inline-block text-xs uppercase tracking-[0.2em] text-gold-light font-semibold animate-title-fade">{titles[titleIdx]}</span>
         </div>
         <div className="mb-14">
-          <p className="text-lg sm:text-xl text-cream font-light tracking-wide">用镜头讲述故事，以剪辑创造感动</p>
-          <p className="text-xs sm:text-sm text-gray-soft mt-2 tracking-wider">Stories through lenses, emotions through edits</p>
+          <p className="text-lg sm:text-xl text-cream font-light tracking-wide">用AI构建画面，以故事创造共鸣。</p>
+          <p className="text-xs sm:text-sm text-gray-soft mt-2 tracking-wider">Craft visuals with AI, create resonance through stories.</p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#portfolio" onClick={scrollToPortfolio}
