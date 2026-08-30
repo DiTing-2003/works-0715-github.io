@@ -23,6 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
   { id:'7', title:'方寸之间女主三视图', category:'image', description:'AI 图片', thumbnail:'/works-0715-github.io/cover-fangcun.jpg', tags:['个人'], year:'2026' },
   { id:'8', title:'方寸之间女主表情', category:'image', description:'AI图片', thumbnail:'/works-0715-github.io/cover-fangcun-biaoqing.jpg', tags:['个人'], year:'2026' },
   { id:'9', title:'方寸之间女主服装', category:'image', description:'AI图片', thumbnail:'/works-0715-github.io/cover-fangcun-fuzhuang.jpg', tags:['个人'], year:'2026' },
+  { id:'10', title:'方寸之间', category:'image', description:'AI图片', thumbnail:'/works-0715-github.io/cover-jing09.jpg', tags:['个人'], year:'2026' },
 ]
 export const categories = [
   { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' }, { key:'script', label:'剧本' },
