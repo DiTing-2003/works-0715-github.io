@@ -27,6 +27,7 @@ export const portfolioItems: PortfolioItem[] = [
   { id:'11', title:'被表哥压榨五年，我带秘方单飞后他求我回去', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/Cursion/37.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-biaoge.jpg', tags:[], year:'2026' },
   { id:'12', title:'鸣凰覆雪，辜负难偿', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/OneEgg/68.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-minghuang.jpg', tags:[], year:'2026' },
   { id:'13', title:'庆典', category:'video', description:'舞蹈', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E8%B7%B3%E8%88%9E.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-qingdian.jpg', tags:['mv'], year:'2026' },
+  { id:'14', title:'桃花灼灼', category:'video', description:'视觉', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E8%B5%B0%E5%9C%A8%E6%A1%83%E8%8A%B1%E4%B8%AD.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-taohua.jpg', tags:['个人'], year:'2026' },
 ]
 export const categories = [
   { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' }, { key:'script', label:'剧本' },
