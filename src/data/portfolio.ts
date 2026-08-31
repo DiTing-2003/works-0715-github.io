@@ -27,6 +27,7 @@ export const portfolioItems: PortfolioItem[] = [
   { id:'11', title:'仙侠打斗', category:'video', description:'打斗', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E4%BB%99%E4%BE%A0%E6%89%93%E6%96%97.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-xianxia.jpg', tags:[], year:'2026' },
   { id:'12', title:'被表哥压榨五年，我带秘方单飞后他求我回去', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/Cursion/37.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-biaoge.jpg', tags:[], year:'2026' },
   { id:'13', title:'鸣凰覆雪，辜负难偿', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/OneEgg/68.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-minghuang.jpg', tags:[], year:'2026' },
+  { id:'14', title:'庆典', category:'video', description:'舞蹈', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E8%B7%B3%E8%88%9E.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-qingdian.jpg', tags:['mv'], year:'2026' },
 ]
 export const categories = [
   { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' }, { key:'script', label:'剧本' },
