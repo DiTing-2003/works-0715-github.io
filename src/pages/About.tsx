@@ -10,13 +10,14 @@ function R({ children }: { children: React.ReactNode }) {
 
 export default function About() {
   const skills = [
-    { n: 'Premiere Pro', l: 95 }, { n: 'After Effects', l: 85 }, { n: 'Final Cut Pro', l: 80 },
-    { n: 'DaVinci Resolve', l: 75 }, { n: 'Photoshop', l: 70 }, { n: 'Audition', l: 85 },
+    { n: 'AI漫剧制作全流程', l: 95 }, { n: 'OpenClaw剧本/分镜脚本与提示词工作流', l: 92 },
+    { n: 'AI生图工具（ChatGPT、小云雀、即梦、豆包、可灵）', l: 90 }, { n: 'AI视频生成（小云雀、即梦）', l: 88 },
+    { n: '小云雀自由画布与多工具组合', l: 85 }, { n: '摄影摄像、光线与构图', l: 80 },
+    { n: '3D/2D画面风格细分与审美把控', l: 84 },
   ]
   const exps = [
-    { p: '2022 — 至今', c: '自由剪辑师', d: '承接各类商业广告、短视频、纪录片等剪辑项目' },
-    { p: '2020 — 2022', c: '某某传媒有限公司', d: '担任后期剪辑师，负责影视项目后期制作' },
-    { p: '2018 — 2020', c: '某某影视工作室', d: '初级剪辑师，参与多部短片和广告制作' },
+    { p: '2025.07 — 2026.08', c: 'AI漫剧抽卡师 · 郑州新融欣数字科技有限公司', d: '负责解读剧本和分镜、生成并优化提示词，根据提示词生成图片和视频；建立关键词库与素材筛选标准，迭代重抽废片，参与复盘优化抽卡流程。' },
+    { p: '2024.07 — 2025.05', c: '编辑 · 新乡市悦洋网络技术有限公司', d: '根据导演的要求，完成符合要求的故事大纲、人物小传和完整的剧本；参与团队关于创意的讨论，提供剧本方向建议。' },
   ]
 
   return (
@@ -41,7 +42,7 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-black text-white mb-1">{siteConfig.name}</h2>
               <p className="text-gold-light font-semibold mb-3">{siteConfig.description}</p>
-              <p className="text-cream leading-relaxed">热爱视频创作，拥有多年专业剪辑经验。擅长通过精准的节奏把控和富有创意的叙事手法，将原始素材转化为引人入胜的视觉作品。</p>
+              <p className="text-cream leading-relaxed">专注于生成式AI视觉创作与故事叙事，擅长从剧本构思出发，运用AI构建角色、场景与视觉世界，将文字创意转化为具有完整叙事性与视觉表现力的作品。</p>
             </div>
           </div>
         </div></R>

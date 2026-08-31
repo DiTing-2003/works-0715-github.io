@@ -9,7 +9,7 @@ export interface SiteConfig {
   name: string; description: string; email: string; phone: string; location: string; heroBackground?: HeroBackground
 }
 export const siteConfig: SiteConfig = {
-  name: '狄婷婷', description: '专业剪辑师 | 视频后期制作',
+  name: '狄婷婷', description: 'AI叙事设计师 | AI视觉设计师 | AI漫剧制作师',
   email: 'dq20231216@163.com', phone: '18239866359', location: '地址',
   heroBackground: { type: 'image', url: 'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AI/%E8%83%8C%E6%99%AF.jpg' },
 }
