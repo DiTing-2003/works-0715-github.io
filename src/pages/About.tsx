@@ -16,8 +16,8 @@ export default function About() {
     { n: '3D/2D画面风格细分与审美把控', l: 84 },
   ]
   const exps = [
-    { p: '2025.07 — 2026.08', c: 'AI漫剧抽卡师 · 郑州新融欣数字科技有限公司', d: '负责解读剧本和分镜、生成并优化提示词，根据提示词生成图片和视频；建立关键词库与素材筛选标准，迭代重抽废片，参与复盘优化抽卡流程。' },
-    { p: '2024.07 — 2025.05', c: '编辑 · 新乡市悦洋网络技术有限公司', d: '根据导演的要求，完成符合要求的故事大纲、人物小传和完整的剧本；参与团队关于创意的讨论，提供剧本方向建议。' },
+    { p: '2025.07 — 2026.08', c: 'AI漫剧抽卡师 · 郑州新融欣数字科技有限公司', d: ['负责解读剧本和分镜、生成并优化提示词，根据提示词生成图片和视频；', '建立关键词库与素材筛选标准，迭代重抽废片，参与复盘优化抽卡流程。'] },
+    { p: '2024.07 — 2025.05', c: '编辑 · 新乡市悦洋网络技术有限公司', d: ['根据导演的要求，完成符合要求的故事大纲、人物小传和完整的剧本；', '参与团队关于创意的讨论，提供剧本方向建议。'] },
   ]
 
   return (
@@ -58,7 +58,11 @@ export default function About() {
                 <div className="absolute left-0 top-0 w-3.5 h-3.5 rounded-full bg-[#e8a838] border-4 border-[#1a1a2e] -translate-x-1/2 shadow-lg shadow-[#e8a838]/30" />
                 <span className="text-sm text-gold-light font-bold">{e.p}</span>
                 <h4 className="text-white font-bold text-lg mt-1">{e.c}</h4>
-                <p className="text-cream text-sm mt-1">{e.d}</p>
+                <div className="mt-1 space-y-1">
+                  {e.d.map((t, j) => (
+                    <p key={j} className="text-cream text-sm flex gap-2"><span className="text-gold-light flex-shrink-0">•</span><span>{t}</span></p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
