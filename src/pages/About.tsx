@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react'
-import { Calendar, Award, GraduationCap, BookOpen, ExternalLink, Star } from 'lucide-react'
+import { Calendar, Award, GraduationCap, Star } from 'lucide-react'
 import { siteConfig } from '@/data/portfolio'
 
 function R({ children }: { children: React.ReactNode }) {
@@ -99,20 +99,6 @@ export default function About() {
                 </div>
               </div>
             ))}
-          </div>
-        </div></R>
-
-        <R><div className="glass-card rounded-2xl p-8 mb-6">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#e8a838]/10 flex items-center justify-center"><BookOpen className="w-5 h-5 text-gold-light" /></div>
-            <h3 className="text-xl font-bold text-white">作品经验</h3>
-          </div>
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <p className="text-cream text-sm">作品集：AI漫剧、短片、图片等作品展示</p>
-            <a href="https://diting-2003.github.io/works-0715-github.io/#/" target="_blank" rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-gradient-to-r from-[#e8a838] to-[#d4952a] text-[#0d0d1a] shadow-lg shadow-[#e8a838]/30 hover:scale-105 transition-all">
-              查看作品集 <ExternalLink className="w-4 h-4" />
-            </a>
           </div>
         </div></R>
 
