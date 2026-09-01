@@ -83,38 +83,37 @@ export default function PortfolioSection() {
             ))}
           </div>
 
-          {/* Navigation arrows */}
+          {/* 分页控制：箭头 + 圆点（位于作品区域外下方，不遮挡作品） */}
           {totalPages > 1 && (
-            <>
+            <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={() => scrollToPage(page - 1)}
                 disabled={page === 0}
-                className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:bg-white/20 transition-all disabled:opacity-0 -ml-5"
+                aria-label="上一页"
+                className="w-11 h-11 rounded-full bg-gradient-to-br from-[#e8a838] to-[#d4952a] text-[#0d0d1a] flex items-center justify-center shadow-lg shadow-[#e8a838]/40 transition-all duration-300 hover:scale-110 hover:shadow-[#e8a838]/60 disabled:opacity-25 disabled:hover:scale-100 disabled:shadow-none"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-6 h-6" strokeWidth={3} />
               </button>
+              <div className="flex items-center gap-2">
+                {Array.from({ length: totalPages }).map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => scrollToPage(i)}
+                    aria-label={`第 ${i + 1} 页`}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      i === page ? 'bg-[#e8a838] w-7' : 'bg-white/20 hover:bg-white/40'
+                    }`}
+                  />
+                ))}
+              </div>
               <button
                 onClick={() => scrollToPage(page + 1)}
                 disabled={page >= totalPages - 1}
-                className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:bg-white/20 transition-all disabled:opacity-0 -mr-5"
+                aria-label="下一页"
+                className="w-11 h-11 rounded-full bg-gradient-to-br from-[#e8a838] to-[#d4952a] text-[#0d0d1a] flex items-center justify-center shadow-lg shadow-[#e8a838]/40 transition-all duration-300 hover:scale-110 hover:shadow-[#e8a838]/60 disabled:opacity-25 disabled:hover:scale-100 disabled:shadow-none"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-6 h-6" strokeWidth={3} />
               </button>
-            </>
-          )}
-
-          {/* Pagination dots */}
-          {totalPages > 1 && (
-            <div className="flex justify-center gap-2 mt-8">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => scrollToPage(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    i === page ? 'bg-[#e8a838] w-6' : 'bg-white/20 hover:bg-white/40'
-                  }`}
-                />
-              ))}
             </div>
           )}
         </div>
