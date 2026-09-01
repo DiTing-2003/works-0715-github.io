@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
               <span className="text-white font-black text-lg">{siteConfig.name}</span>
             </div>
-            <p className="text-cream text-sm leading-relaxed">专业视频剪辑与后期制作</p>
+            <p className="text-cream text-sm leading-relaxed">AI视觉设计师 | AI叙事设计师 | AI漫剧制作师</p>
           </div>
           <div>
             <h4 className="text-cream text-sm font-bold mb-5 uppercase tracking-wider">导航</h4>
