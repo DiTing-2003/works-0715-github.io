@@ -29,6 +29,9 @@ export const portfolioItems: PortfolioItem[] = [
   { id:'13', title:'庆典', category:'video', description:'舞蹈', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E8%B7%B3%E8%88%9E.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-qingdian.jpg', tags:['mv'], year:'2026' },
   { id:'14', title:'桃花灼灼', category:'video', description:'视觉', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E8%B5%B0%E5%9C%A8%E6%A1%83%E8%8A%B1%E4%B8%AD.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-taohua.jpg', tags:[], year:'2026' },
   { id:'15', title:'天渊', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E5%A4%A9%E6%B8%8A.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-tianyuan.jpg', tags:[], year:'2026' },
+  { id:'16', title:'将军的掌中娇', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E5%B0%86%E5%86%9B%E7%9A%84%E6%8E%8C%E4%B8%AD%E5%A8%87.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-jiangjun.jpg', tags:[], year:'2025' },
+  { id:'17', title:'玫瑰工厂', category:'video', description:'宣传片', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E7%8E%AB%E7%91%B0%E5%B7%A5%E5%8E%82.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-meigui.jpg', tags:[], year:'2025' },
+  { id:'18', title:'置换', category:'video', description:'短片', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E7%BD%AE%E6%8D%A2.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-zhihuan.jpg', tags:[], year:'2025' },
 ]
 export const categories = [
   { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' },
