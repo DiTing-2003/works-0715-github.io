@@ -1,5 +1,5 @@
 export type VideoType = 'direct' | 'youtube' | 'bilibili' | 'vimeo' | '123pan'
-export type PortfolioCategory = 'video' | 'image' | 'script'
+export type PortfolioCategory = 'video' | 'image'
 export interface PortfolioItem {
   id: string; title: string; category: PortfolioCategory
   description: string; videoUrl?: string; videoType?: VideoType; thumbnail: string; content?: string; tags: string[]; year: string
@@ -31,5 +31,5 @@ export const portfolioItems: PortfolioItem[] = [
   { id:'15', title:'天渊', category:'video', description:'漫剧', videoUrl:'https://dq20231216-1326435468.cos.ap-beijing.myqcloud.com/AIworks/other/%E5%A4%A9%E6%B8%8A.mp4', videoType:'direct', thumbnail:'/works-0715-github.io/cover-tianyuan.jpg', tags:[], year:'2026' },
 ]
 export const categories = [
-  { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' }, { key:'script', label:'剧本' },
+  { key:'all', label:'全部' }, { key:'video', label:'视频' }, { key:'image', label:'图片' },
 ] as const

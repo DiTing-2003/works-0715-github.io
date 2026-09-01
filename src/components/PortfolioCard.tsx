@@ -1,11 +1,10 @@
 ﻿import { useRef, useEffect, useState } from 'react'
-import { Play, Image as ImageIcon, FileText } from 'lucide-react'
+import { Play, Image as ImageIcon } from 'lucide-react'
 import type { PortfolioItem } from '@/data/portfolio'
-const catLabels: Record<string, string> = { video:'视频', image:'图片', script:'剧本' }
+const catLabels: Record<string, string> = { video:'视频', image:'图片' }
 
 function TypeIcon({ category, className }: { category: string; className: string }) {
   if (category === 'image') return <ImageIcon className={className} />
-  if (category === 'script') return <FileText className={className} />
   return <Play className={className} />
 }
 
